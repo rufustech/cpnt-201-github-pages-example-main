@@ -1,0 +1,58 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+#scoreBoard {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+}
+
+.icon-image-hidden {
+  display: none;
+}
+
+.icon-image {
+  display: block;
+}
+
+
+.card.flipped {
+  background-color: #fff;
+  color: #333;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: transparent; /* Hide icon text initially */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card.hidden {
+  background-color: #333;
+  color: transparent; /* Keep icon hidden */
+}
+
+.card.flipped,
+.card.matched {
+  background-color: #fff;
+  color: #333; /* Show icon when flipped or matched */
+}
